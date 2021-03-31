@@ -1,0 +1,4 @@
+shared_library("helper") {
+  crate_type = "cdylib"
+  sources = [ "lib.rs" ]
+}

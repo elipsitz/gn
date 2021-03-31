@@ -1,5 +1,11 @@
+extern "C" {
+    fn my_function(val: u64);
+}
+
+
 fn main() {
-    let f = baz::Foo::new("hello");
     println!("Hello world!");
-    println!("I'm from a dependency: {:?}!", f);
+    unsafe {
+        my_function(1234);
+    }
 }

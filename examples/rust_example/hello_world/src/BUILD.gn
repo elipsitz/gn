@@ -1,7 +1,7 @@
 executable("hello_world") {
   sources = [ "main.rs" ]
-  deps = [ "//hello_world/foo/src:foo" ]
-  aliased_deps = {
-    baz = "//hello_world/foo/src:foo"
-  }
+  deps = [ "//hello_world/helper" ]
+
+  # Uncomment to link against libhelper.so
+  # rustflags = [ "-Clink-arg=./libhelper.so" ]
 }
